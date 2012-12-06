@@ -4,12 +4,18 @@ import fr.wdctn.exceptions.PosGoutInexistantException;
 
 /**
  * @author Loic
- *
+ * Classe définissant les gouts d'une personnes.
  */
 public class Gout
 {
+	/**
+	 * 
+	 */
 	private final static int NBGOUT = 5;
 	
+	/**
+	 * 
+	 */
 	private String[] gout;
 	
 	/**

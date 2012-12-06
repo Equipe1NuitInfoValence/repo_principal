@@ -5,13 +5,25 @@ package fr.wdctn.classes;
  */
 public class Logistique
 {
+	/**
+	 * 
+	 */
 	private String zone;
 	
+	/**
+	 * 
+	 */
 	private int rayon;
 	
+	/**
+	 * 
+	 */
 	private String moyenLocomotion;
 	
-	private int plageHoraire;
+	/**
+	 * 
+	 */
+	private Periode plageHoraire;
 	
 	/**
 	 * Constructeur par défaut
@@ -21,7 +33,7 @@ public class Logistique
 		this.zone = "";
 		this.rayon = 0;
 		this.moyenLocomotion = "";
-		this.plageHoraire = 0;
+		this.plageHoraire = null;
 	}
 	
 	/**
@@ -32,7 +44,7 @@ public class Logistique
 	 * @param moyenLocomotion Moyen de locomotion de l'utilisateur
 	 * @param plageHoraire 
 	 */
-	public Logistique(String zone, int rayon, String moyenLocomotion, int plageHoraire)
+	public Logistique(String zone, int rayon, String moyenLocomotion, Periode plageHoraire)
 	{
 		this.zone = zone;
 		this.rayon = rayon;
@@ -91,7 +103,7 @@ public class Logistique
 	/**
 	 * @return
 	 */
-	public int getPlageHoraire()
+	public Periode getPlageHoraire()
 	{
 		return plageHoraire;
 	}
@@ -99,7 +111,7 @@ public class Logistique
 	/**
 	 * @param plageHoraire
 	 */
-	public void setPlageHoraire(int plageHoraire)
+	public void setPlageHoraire(Periode plageHoraire)
 	{
 		this.plageHoraire = plageHoraire;
 	}

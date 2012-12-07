@@ -5,7 +5,7 @@ import java.sql.*;
  * @author Loic
  *
  */
-public class GestionBdD implements InterBdD
+public class GestionBdD //implements InterBdD
 {
 	private String sql = "SELECT * FROM personne WHERE nom = ?";
 	private String url = "109.69.193.29";
@@ -51,9 +51,10 @@ public class GestionBdD implements InterBdD
 	}
 
 	@Override
-	public Evenement getEvenement(Planning Parcours, Information Info)
+	public void getEvenement(Planning Parcours, Information Info)
 	{
-		Evenement res = new Evenement();
+		Evenement resEvenement = new Evenement();
+		ResultSet rs = null;
 		try
 		{
 			preparedStatement = connect.prepareStatement(sql);
@@ -72,15 +73,17 @@ public class GestionBdD implements InterBdD
 		}
 		try
 		{
-			preparedStatement.executeUpdate();
+			rs = preparedStatement.executeQuery();
 		} catch (SQLException e)
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		return res;
+		while (rs.next())
+		{
+			String prenom = rs.getString(")
+			System.out.println(arg0)
+		}
 	}
 
 }

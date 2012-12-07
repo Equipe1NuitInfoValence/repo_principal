@@ -50,9 +50,9 @@ public class GestionBdD //implements InterBdD
 		this.mdp = mdp;
 	}
 
-	@Override
-	public void getEvenement(Planning Parcours, Information Info)
+	public void getEvenement()
 	{
+		this.connect();
 		Evenement resEvenement = new Evenement();
 		ResultSet rs = null;
 		try
@@ -79,10 +79,25 @@ public class GestionBdD //implements InterBdD
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		while (rs.next())
+		try
 		{
-			String prenom = rs.getString(")
-			System.out.println(arg0)
+			while (rs.next())
+			{
+				String prenom = rs.getString("prenom");
+				System.out.println(prenom);
+			}
+		} catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try
+		{
+			connect.close();
+		} catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

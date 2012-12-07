@@ -7,19 +7,18 @@ import java.sql.*;
  */
 public class GestionBdD //implements InterBdD
 {
-	private String sql = "SELECT * FROM personne WHERE nom = ?";
-	private String url = "109.69.193.29";
-	private String login = "root";
-	private String mdp = "nuOGUMtutBWjCVMBS4is";
-	private PreparedStatement preparedStatement = null;
-	private Connection connect = null;
+	private final String SQL = "SELECT * FROM personne WHERE nom = ?";
+	private String url;
+	private String login;
+	private String mdp;
+	private PreparedStatement preparedStatement;
+	private Connection connect;
 	
 	private void connect()
 	{
-		Connection connect = null;
 		try
 		{
-			Class.forName("com.mysql.jdbc.driver");
+			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e)
 		{
 			// TODO Auto-generated catch block
@@ -27,7 +26,7 @@ public class GestionBdD //implements InterBdD
 		}
 		try
 		{
-			connect = DriverManager.getConnection(url,login ,mdp );
+			this.connect = DriverManager.getConnection(url,login ,mdp );
 		} catch (SQLException e)
 		{
 			// TODO Auto-generated catch block
@@ -48,6 +47,8 @@ public class GestionBdD //implements InterBdD
 		this.url = url;
 		this.login = login;
 		this.mdp = mdp;
+		preparedStatement = null;
+		connect = null;
 	}
 
 	public void getEvenement()
@@ -57,7 +58,7 @@ public class GestionBdD //implements InterBdD
 		ResultSet rs = null;
 		try
 		{
-			preparedStatement = connect.prepareStatement(sql);
+			preparedStatement = connect.prepareStatement(SQL);
 		} catch (SQLException e)
 		{
 			// TODO Auto-generated catch block
@@ -65,7 +66,7 @@ public class GestionBdD //implements InterBdD
 		}
 		try
 		{
-			preparedStatement.setObject(1, "Martin");
+			preparedStatement.setString(1, "Martin");
 		} catch (SQLException e)
 		{
 			// TODO Auto-generated catch block

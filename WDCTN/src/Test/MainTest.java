@@ -18,7 +18,7 @@ public class MainTest
 	{
 		//gestBdD = new GestionBdD("jdbc:mysql://109.69.193.29/eq1","root","nuOGUMtutBWjCVMBS4is");
 		gestBdD = new GestionBdD("jdbc:mysql://109.69.193.29/eq1","eq1","iutvalence");
-		gestBdD.getEvenement();
+		gestBdD.test();
 		
 	}
 	

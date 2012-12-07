@@ -88,7 +88,7 @@ public class Categorie
 	}
 
 	/**
-	 * @return
+	 * @return tag Couple <id de la categorie, nom de la categorie>
 	 */
 	public Map<Integer, String> getTag() {
 		return tag;

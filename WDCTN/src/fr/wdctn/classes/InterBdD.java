@@ -7,6 +7,12 @@ package fr.wdctn.classes;
 public interface InterBdD
 {
 
+	/**
+	 * Methode renvoyant un evenement
+	 * @param Parcours
+	 * @param Info
+	 * @return un evenement
+	 */
 	public Evenement getEvenement(Planning Parcours, Information Info);
 	
 }

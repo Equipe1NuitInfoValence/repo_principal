@@ -51,6 +51,9 @@ public class GestionBdD //implements InterBdD
 		connect = null;
 	}
 
+	/**
+	 * Méthode permettant de recupérer un évênement
+	 */
 	public void getEvenement()
 	{
 		this.connect();

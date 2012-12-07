@@ -1,16 +1,12 @@
 package fr.wdctn.classes;
 
+/**
+ * @author Loic
+ * Interface pour la base de donnée
+ */
 public interface InterBdD
 {
-	/**
-	 * 
-	 */
-	
-	/**
-	 * @param Parcours
-	 * @param Info
-	 * @return 
-	 */
+
 	public Evenement getEvenement(Planning Parcours, Information Info);
 	
 }

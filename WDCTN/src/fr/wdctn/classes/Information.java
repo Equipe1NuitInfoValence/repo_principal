@@ -19,11 +19,6 @@ public class Information
 	private int rayon;
 	
 	/**
-	 * Moyen de déplacement de l'utilisateur pour se deplacer dans le lieu d'un des évênements
-	 */
-	private MoyenLocomotion moyenLocomotion;
-	
-	/**
 	 * Periode pendant laquelle l'utilisateur va participer à des évênements
 	 */
 	private Periode plageHoraire;
@@ -40,7 +35,6 @@ public class Information
 	{
 		this.zone = "";
 		this.rayon = 0;
-		this.moyenLocomotion = null;
 		this.plageHoraire = null;
 		this.setaLGout(null);
 	}
@@ -50,15 +44,13 @@ public class Information
 	 * le moyen de locomotion et la plage horaire
 	 * @param zone Nom de la ville
 	 * @param rayon Rayon dans lequel le visiteur veut "trouver" des activité
-	 * @param moyenLocomotion Moyen de locomotion de l'utilisateur
 	 * @param plageHoraire Periode pendant laquelle l'utilisateur va réaliser des activités
 	 * @param aLGout Liste des gouts
 	 */
-	public Information(String zone, int rayon, MoyenLocomotion moyenLocomotion, Periode plageHoraire, ArrayList<Integer> aLGout)
+	public Information(String zone, int rayon, Periode plageHoraire, ArrayList<Integer> aLGout)
 	{
 		this.zone = zone;
 		this.rayon = rayon;
-		this.moyenLocomotion = moyenLocomotion;
 		this.plageHoraire = plageHoraire;
 		this.aLGout = aLGout;
 	}
@@ -93,22 +85,6 @@ public class Information
 	public void setRayon(int rayon)
 	{
 		this.rayon = rayon;
-	}
-
-	/**
-	 * @return le moyen de locomotion de l'utilisateur
-	 */
-	public MoyenLocomotion getMoyenLocomotion()
-	{
-		return moyenLocomotion;
-	}
-
-	/**
-	 * @param moyenLocomotion Modifie le moyen de locomotion de l'utilisateur
-	 */
-	public void setMoyenLocomotion(MoyenLocomotion moyenLocomotion)
-	{
-		this.moyenLocomotion = moyenLocomotion;
 	}
 
 	/**

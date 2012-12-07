@@ -8,7 +8,8 @@ public interface InterVue
 {
 	/**
 	 * Methode permettant de recupérer les Informations sur l'utilisateur
+	 * @param Info Information
 	 */
-	public void giveInfo();
+	public void giveInfo(Information Info);
 	
 }

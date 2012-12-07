@@ -9,6 +9,4 @@ import java.util.ArrayList;
 public class Planning
 {
 	private ArrayList<Evenement> aLEvenement;
-	
-	
 }

@@ -100,5 +100,10 @@ public class Categorie
 	public void setTag(Map<Integer, String> categorie) {
 		this.tag = categorie;
 	}
+	
+	public void addTag(int id, String libel)
+	{
+		this.tag.put(id, libel);
+	}
 }
 
